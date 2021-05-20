@@ -1,0 +1,265 @@
+
+:root {
+    --white-01: #ffffff;
+    --blue-01:#0188fe;
+    --orange-01:#ff6a00;
+    --text-01:#777777;
+    --text-02:#444444;
+    --light-01:#f3f6ff;
+    --dark-01:#00203c;
+}
+
+html {
+    font-size:16px;
+    font-family: 'Roboto', sans-serif;
+} html, body {
+    margin:0;
+} body {
+    padding-bottom: 10rem;
+}
+
+a {
+    text-decoration: none;
+} p, h1, h2, h3, h4, h5, h6 {
+    margin:0;
+} p {
+    margin: 1rem 10vw;
+    font-size: 1rem;
+    text-align: -webkit-right;
+    color:var(--text-01)
+}
+
+header {
+    background:rgba(255,255,255,0.91);
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    height: 4.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 999;
+} header a {
+    font-size: 1rem;
+    background: var(--blue-01);
+    padding: 0.8rem 5vw;
+    color: var(--white-01);
+    display: inline-block;
+    border-radius: 0.3rem;
+} #header_logo {
+    height: 2.6rem;
+} #header_logotipo {
+    display:none;
+    height: 2.6rem;
+} header::after {
+    content: '';
+    position: absolute;
+    bottom: -0.25rem;
+    width: 100%;
+    height: 0.25rem;
+    background: linear-gradient(45deg, var(--blue-01), #9246cc, var(--orange-01), #fcd648);
+}
+
+#section01 {
+    overflow:hidden;
+} #intro_article {
+    background:var(--blue-01);
+    width: 91%;
+    height: 24rem;
+    margin: 0 auto;
+    border-radius: 0 0 2rem 2rem;
+} .big_ilus {
+    width: 95%;
+    margin: -14rem auto 3rem auto;
+}
+
+.flex01 {
+    display:flex;
+    flex-direction: column;
+}
+
+
+h1, h2, p {
+    text-align: center;
+} h1 .title {
+    font-size: 2.6rem;
+}  .title {
+    color: var(--blue-01);
+    font-size: 2rem;
+    margin: 0 1rem;
+    display: block;
+    font-weight: 400;
+} .subtitle {
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--orange-01);
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    letter-spacing: 2px;
+}
+
+.margin01 {
+    margin: 2rem auto 5rem auto;
+}
+
+.cta {
+    display: table;
+    position: relative;
+    border-radius: 0.4rem;
+    background: var(--blue-01);
+    padding: 0.8rem 1.6rem;
+    color: var(--white-01);
+    text-align: center;
+    margin: 0 auto;
+    max-width: 62%;
+} .cta::before, .cta::after  {
+    content:'';
+    position:absolute;
+    border-radius: 50%;
+    background: var(--blue-01);
+} .cta::before {
+    width: 0.6rem;
+    height: 0.6rem;
+    top: -0.6rem;
+    right: -0.6rem;
+} .cta::after {
+    width: 0.3rem;
+    height: 0.3rem;
+    top: -0.9rem;
+    right: -0.9rem;
+}
+
+#wave_01, #wave_02 {
+    position: absolute;
+    z-index: -1;
+} #wave_01 {
+    width: 100%;
+} #wave_02 {
+    margin-top: 31rem;
+    width: 90%;
+}
+
+
+
+#bullets_01, #bullets_02, #bullets_03 {
+    text-align: center;
+    margin: 2rem 0;
+} #bullets_01 img, #bullets_02 img {
+    margin: 1rem auto;
+    display: block;
+    object-fit: contain;
+} #bullets_01 img {
+    width: 12rem;
+    height: 6rem;
+} #bullets_02 img {
+    width: 12rem;
+    height: 8rem;
+} #bullets_01 h3, #bullets_02 h3, #bullets_03 h3 {
+    color: var(--blue-01);
+    font-size: 1.8rem;
+    margin: 0 10vw;
+    font-weight: 500;
+} #bullets_01 p {
+    font-size: 1rem;
+} #bullets_01 b, #bullets_01 strong {
+    color:var(--text-02)
+}
+
+.divisor {
+    width: 62%;
+    margin: 1rem auto;
+    border-top: 4px solid rgba(150,180,230,0.15);
+}
+
+
+#section02 {
+    background-color: var(--dark-01);
+    padding: 3rem 0;
+    background-image: url(assets/confetti_bg.svg);
+    background-size: 50%;
+    background-repeat: repeat no-repeat;
+    background-position: 80% -10%;
+    background-attachment: fixed;
+} #section02 p {
+    color: var(--light-01);
+    font-weight: 300;
+} #hand_icon {
+    margin: 2rem auto 1rem auto;
+    width: 33%;
+}
+
+
+#break {
+    position: relative;
+    background: url(assets/break_bg.jpg) fixed;
+    background-size: cover;
+    background-position: center;
+    color: var(--white-01);
+    text-align: center;
+    padding: 12rem 0;
+    overflow: hidden;
+    z-index: 0;
+} #break span {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+} #break h3 {
+    margin: 0 5vw 2rem 5vw;
+    font-size: 2rem;
+    font-weight: 400;
+} #break b {
+    font-weight: 600;
+} #break .cta {
+    background: var(--white-01);
+    color: var(--blue-01);
+    font-weight: 500;
+} #break .cta::after, #break .cta::before {
+    top: unset;
+    background: var(--white-01);
+} #break .cta::after {
+    bottom: -0.9rem;
+} #break .cta::before {
+    bottom: -0.6rem;
+} #color_ellipse01, #color_ellipse02 {
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+} #color_ellipse01 {
+    width: 40rem;
+    height: 40rem;
+    background: rgb(255 106 0 / 100%);
+    bottom: -33rem;
+    right: 2rem;
+    mix-blend-mode: hard-light;
+} #color_ellipse02 {
+    width: 60rem;
+    height: 60rem;
+    background: #9246cc;
+    right: -44rem;
+    bottom: -42rem;
+    mix-blend-mode: lighten;
+}
+
+
+
+#section03 {
+    padding: 3rem 0;
+} #anatomy_mobile {
+    width: 91%;
+    display: block;
+    margin: 2rem auto 4rem auto;
+} #anatomy_desktop {
+    display: none;
+}
+
+
+#bullets_03 {
+
+} #bullets_03 img {
+    width: 70%;
+    margin: 0 auto 1rem auto;
+    display: block;
+}
