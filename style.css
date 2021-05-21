@@ -52,25 +52,60 @@ header {
     height: 2.6rem;
 } #header_logotipo {
     display:none;
-    height: 2.6rem;
 } header::after {
     content: '';
     position: absolute;
-    bottom: -0.25rem;
-    width: 100%;
-    height: 0.25rem;
+    left: 0;
+    right: 0;
+    bottom: -0.2rem;
+    height: 0.2rem;
     background: linear-gradient(45deg, var(--blue-01), #9246cc, var(--orange-01), #fcd648);
 }
 
 #section01 {
     overflow:hidden;
 } #intro_article {
+    position:relative;
     background:var(--blue-01);
     width: 91%;
     height: 24rem;
     margin: 0 auto;
     border-radius: 0 0 2rem 2rem;
-} .big_ilus {
+    overflow: hidden;
+} #intro_article div {
+    border-radius:50%;
+    position:absolute;
+    background: rgba(255,255,255,0.2);
+} #intro_article div:first-child {
+    width: 10rem;
+    height: 10rem;
+    right: -4rem;
+    top: 0rem;
+    animation: glowing 3s ease infinite alternate;
+} #intro_article div:nth-child(2) {
+    width: 40rem;
+    height: 40rem;
+    right: -25rem;
+    top: 6rem;
+    animation: glowing 3s 1s ease infinite alternate;
+} #intro_article div:last-child {
+    width: 20rem;
+    height: 20rem;
+    left: -1rem;
+    top: 17rem;
+    animation: glowing 4s 2s ease infinite alternate;
+}
+
+@keyframes glowing {
+    0% {
+        background-color:rgba(255,255,255,0.2);
+    } 100% {
+        background-color:rgba(255,255,255,0.0);
+    }
+}
+
+.big_ilus {
+    position: relative;
     width: 95%;
     margin: -14rem auto 3rem auto;
 }
@@ -196,6 +231,7 @@ h1, h2, p {
 
 #break {
     position: relative;
+    background-color: var(--blue-01);
     background: url(assets/break_bg.jpg) fixed;
     background-size: cover;
     background-position: center;
@@ -209,6 +245,7 @@ h1, h2, p {
     letter-spacing: 2px;
     font-weight: 500;
 } #break h3 {
+    color: var(--white-01);
     margin: 0 5vw 2rem 5vw;
     font-size: 2rem;
     font-weight: 400;
@@ -277,15 +314,20 @@ h1, h2, p {
     margin: 2rem auto 0 auto;
     color: var(--light-01);
 } label {
-    margin-bottom: 0.2rem;
     font-size: 1rem;
     font-weight: 300;
 } input {
-    margin-bottom: 1rem;
+    margin: 0.3rem 0 1rem 0;
     background: rgba(255,255,255,0.06);
     border: 2px solid var(--white-01);
     border-radius: 0.4rem;
-    padding: 0.6rem 0.2rem;
+    padding: 0.6rem 0.6rem;
+    color: var(--white-01);
+    font-size: 1rem;
+    transition:background-color 0.6s ease;
+} input:focus {
+    background-color: rgba(255,255,255,0.1);
+    outline:none;
 } button {
     padding: 0.6rem 0;
     background: var(--blue-01);
@@ -307,6 +349,35 @@ footer {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width:360px) {
     html {
         font-size:14px;
@@ -314,5 +385,31 @@ footer {
 } @media (max-width:320px) {
     html {
         font-size:12px;
+    }
+} @media (max-width:260px) {
+    html {
+        font-size:10px;
+    }
+}  @media (min-width:600px) {
+    #header_logo {
+        display:none;
+    } #header_logotipo {
+        display:block;
+        height: 3rem;
+    } header {
+        padding: 0 10%;
+        justify-content: space-between;
+    } #header_cta {
+        padding: 0.8rem 2rem;
+    }
+
+    section p {
+        width: 24rem;
+        margin: 1rem auto;
+    }
+    
+    .title {
+        width: 60%;
+        margin: 0 auto;
     }
 }
