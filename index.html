@@ -16,11 +16,13 @@
     <script src="script.js" defer></script>
 
 </head>
-<body>
+<body id="up">
     <header>
-        <img id="header_logo" src="assets/logotipo_menor.svg" alt="Logo da EasyContent">
-        <img id="header_logotipo" src="assets/logotipo.svg" alt="Logo da EasyContent">
-        <a href="#">Gere agora suas tags grátis</a>
+        <a href="#up">
+            <img id="header_logo" src="assets/logotipo_menor.svg" alt="Logo da EasyContent">
+            <img id="header_logotipo" src="assets/logotipo.svg" alt="Logo da EasyContent">
+        </a>
+        <a id="header_cta" href="#form">Gere agora suas tags grátis</a>
     </header>
 
     <section id="section01">
@@ -33,7 +35,7 @@
             <div>
                 <h1>
                     <span class="subtitle">O novo assistente na web</span> 
-                    <span class="title">É EasyContent!</span>
+                    <span class="title"><b>É EasyContent!</b></span>
                 </h1>
 
                 <p>O EasyContent transforma a experiência de uso dos seus visitantes durante o consumo de conteúdos de texto, sejam eles matérias, releases, tutoriais, artigos ou notícias.</p>
@@ -145,7 +147,7 @@
     </section>
 
     <section id="section03">
-        <span class="subtitle">pró-ativo e prático</span> 
+        <h3 class="subtitle">pró-ativo e prático</h3> 
         <h2>
             <span class="title">Como funciona</span>
         </h2>
@@ -175,7 +177,29 @@
                 <p>Esse aprendizado em escala torna o EasyContent altamente escalável e cada vez mais relevante para os usuários.</p>
             </article>
         </div>
+    </section>
+
+    <section id="form_section">
+        <h3 class="subtitle">É fácil de implementar e começar a ganhar</h3> 
+        <h2>
+            <span class="title">Ofereça tudo isso agora mesmo em seu site!</span>
+        </h2>
+
+        <form id="form" action="">
+            <label for="">Nome</label>
+            <input type="text">
+
+            <label for="">E-mail</label>
+            <input type="text">
+            
+            <label for="">URL do Website</label>
+            <input type="text">
+
+            <button>enviar</button>
+        </form>
 
     </section>
+
+    <footer></footer>
 </body>
 </html>
