@@ -24,6 +24,7 @@ a {
     text-decoration: none;
 } p, h1, h2, h3, h4, h5, h6 {
     margin:0;
+    cursor: default;
 } p {
     font-size: 1rem;
     color:var(--text-01)
@@ -112,6 +113,7 @@ header {
     position: relative;
     width: 95%;
     margin: -14rem auto 3rem auto;
+    will-change: transform;
 }
 
 .flex01 {
@@ -197,8 +199,9 @@ h1 .title {
     text-align: center;
     margin: 2rem auto;
 } #bullets_01 article p, #bullets_02 article p, #bullets_03 article p {
-    max-width: 22rem;
+    max-width: 21rem;
     margin: 1rem auto;
+    line-height: 1.5rem;
 } #bullets_01 img, #bullets_02 img {
     margin: 1rem auto;
     display: block;
@@ -217,7 +220,8 @@ h1 .title {
 } #bullets_01 p {
     font-size: 1rem;
 } #bullets_01 b, #bullets_01 strong {
-    color:var(--text-02)
+    color:var(--text-02);
+    font-weight: 400;
 }
 
 .divisor {
@@ -305,6 +309,7 @@ h1 .title {
     padding: 3rem 0 0 0;
 } #anatomy_mobile {
     width: 91%;
+    max-width: 33rem;
     display: block;
     margin: 2rem auto 4rem auto;
 } #anatomy_desktop {
@@ -417,7 +422,7 @@ footer {
         display:none;
     } #header_logotipo {
         display:block;
-        height: 3rem;
+        height: 2.8rem;
     } header {
         padding: 0 10%;
         justify-content: space-between;
@@ -436,7 +441,8 @@ footer {
     }
 
     #section02 {
-        background-size: 25%;
+        background-size: 20rem;
+        background-position: 80% -8rem;
     }
 
     .divisor {
@@ -470,10 +476,13 @@ footer {
         width: 20rem;
     }
 
-    #bullets_01 article, #bullets_02 article  {
+    #bullets_01 article  {
         width: 20rem;
         margin: 0 2rem;
-    }#bullets_01 h3, #bullets_02 h3, #bullets_03 h3 {
+    } #bullets_02 article {
+        width: 16rem;
+        margin: 1rem 2rem;
+    } #bullets_01 h3, #bullets_02 h3, #bullets_03 h3 {
         margin: 0;
     } .flex01 {
         flex-flow: row wrap;
@@ -483,7 +492,49 @@ footer {
         display:none;
     }
 
-} @media (min-width:1024px) {
+    #hand_icon {
+        margin: 0 3rem 0 0;
+    } .handflex {
+        justify-content: center;
+        flex-flow: row;
+        margin: 2rem 0 0 0;
+        text-align: left;
+    } .handflex div {
+        width: 30vw;
+        min-width: 20rem;
+    }  .handflex img {
+        width:20rem;
+    } .handflex .p1 {
+        margin: 1rem 0;
+        width: unset;
+        max-width: unset;
+    }
+
+    #form_section {
+        width: 100%;
+        margin: 0 auto -10rem auto;
+        padding: 5rem 0;
+        border-radius: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:1024px) {
 
 
     .p1 {
@@ -500,12 +551,13 @@ footer {
     }
 
     .big_ilus {
-        margin: calc(-10rem - 10vw) 2rem 3rem 0; */
-        width: 50%;
+        margin: calc(-11rem - 12vw) 3vw 3rem 0;
+        width: 48%;
+        max-width: unset;
     }
 
     .margin01 {
-        margin: 3rem auto 5rem auto;
+        margin: 4rem auto 5rem auto;
     }
 
     .divisor {
@@ -514,11 +566,11 @@ footer {
 
     .flex01 {
         flex-direction: row;
-        justify-content: space-evenly;
     
     }
-
-    #bullets_01 article {
+    #bullets_01, #bullets_02, #bullets_03 {
+        margin: 2rem auto 4rem auto;
+        justify-content: center;
     } #bullets_01 h3, #bullets_02 h3, #bullets_03 h3 {
         margin:0;
     }
@@ -540,7 +592,11 @@ footer {
         transition: background-color 0.2s ease, transform 0.2s ease;
     } .cta:hover, #header_cta:hover {
         background: var(--blue-02);
-        transform:scale(1.05);
+        transform:scale(1.025);
+    } .cta:active, #header_cta:active {
+        background: var(--blue-02);
+        transform:scale(0.975);
+        transition: background-color 0.2s ease, transform 0.05s ease;
     } .cta::before, .cta::after  {
         transition: transform 0.1s ease;
     } .cta:hover::after, .cta:hover::before {
@@ -548,9 +604,36 @@ footer {
     } #break .cta:hover::after, #break .cta:hover::before {
         transform: translate(-1rem, -1rem);
     }
-
-} @media (min-width:1280px) {
-
+    #anatomy_mobile {
+        display: none;
+    } #anatomy_desktop {
+        display: block;
+        width: 65%;
+        margin: 2rem auto 4rem auto;
+    }
     
+    #break h3 {
+        width: 48vw;
+    }
+
+    #section02 {
+        padding: 5rem 0 7rem 0;
+    }
+    
+    .title {
+        font-size: 2.25rem;
+        width: 34rem;
+        margin: 0.5rem auto 0 auto;
+    }
+
+    #bullets_03 h3 {
+        width: 70%;
+        margin: 0 auto;
+    } #bullets_03 img {
+        height: 24rem;
+        width: 24rem;
+    }
+    
+} @media (min-width:1280px) {
 
 }
