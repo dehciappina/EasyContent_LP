@@ -1,4 +1,29 @@
 
+#loading_bg {
+    background: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+} #loading_bg img {
+    width: clamp(150px, 15vw, 250px);
+    animation: loading 3s ease infinite alternate;
+}
+
+@keyframes loading {
+    0% {
+        transform:scale(0.8);
+    } 100% {
+        transform:scale(1);
+    }
+}
+
 :root {
     --white-01: #ffffff;
     --blue-01:#0188fe;
@@ -8,6 +33,7 @@
     --text-02:#444444;
     --light-01:#f3f6ff;
     --dark-01:#000B32;
+    --dark-02: #001C4A;
 }
 
 html {
@@ -42,7 +68,7 @@ header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    z-index: 999;
+    z-index: 998;
 } #header_cta {
     font-size: 1rem;
     background: var(--blue-01);
@@ -70,13 +96,16 @@ header {
     text-align: center;
     padding: 0 0 2rem 0;
 } #intro_article {
-    position:relative;
-    background:var(--blue-01);
+    position: relative;
     width: 91%;
     height: 24rem;
     margin: 0 auto;
     border-radius: 0 0 2rem 2rem;
     overflow: hidden;
+    background-image: url(assets/pattern01.svg), linear-gradient(var(--blue-01) 50%, #8ECAFF);
+    background-size: 0.7rem;
+    background-position: center;
+    background-color: var(--blue-01);
 } #intro_article div {
     border-radius:50%;
     position:absolute;
@@ -124,6 +153,7 @@ header {
 .p1 {
     margin: 1rem 10vw;
     max-width: 30rem;
+    line-height: 1.5rem;
 }
 
 
@@ -198,10 +228,14 @@ h1 .title {
 #bullets_01, #bullets_02, #bullets_03 {
     text-align: center;
     margin: 2rem auto;
-} #bullets_01 article p, #bullets_02 article p, #bullets_03 article p {
+} #bullets_01 article p, #bullets_02 article p{
     max-width: 21rem;
+} #bullets_01 article p, #bullets_02 article p, #bullets_03 article p {
     margin: 1rem auto;
     line-height: 1.5rem;
+} #bullets_03 article p {
+    width: 85%;
+    max-width: 38rem;
 } #bullets_01 img, #bullets_02 img {
     margin: 1rem auto;
     display: block;
@@ -219,7 +253,7 @@ h1 .title {
     font-weight: 500;
 } #bullets_01 p {
     font-size: 1rem;
-} #bullets_01 b, #bullets_01 strong {
+} .flex01 p b, .flex01 p strong {
     color:var(--text-02);
     font-weight: 400;
 }
@@ -230,15 +264,15 @@ h1 .title {
     border-top: 4px solid rgba(150,180,230,0.15);
 }
 
-#section02, #form_section {
+#section02 {
     background-color: var(--dark-01);
 } #section02 {
     padding: 3rem 0 4rem 0;
-    background-image: url(assets/confetti_bg.svg);
-    background-size: 50%;
-    background-repeat: repeat no-repeat;
+    background-image: url(assets/confetti_bg.svg), url(assets/pattern01.svg);
+    background-size: 15rem, 0.7rem;
+    background-repeat: repeat no-repeat, repeat;
     background-position: 80% -10%;
-    background-attachment: fixed;
+    background-attachment: fixed, scroll;
     text-align: center;
 } #section02 p {
     color: var(--light-01);
@@ -248,6 +282,12 @@ h1 .title {
     margin: 2rem auto 1rem auto;
 }
 
+#form_section {
+    background-color: var(--dark-01);
+    background-image: url(assets/pattern01.svg);
+    background-size: 0.7rem;
+    background-position: center;
+}
 
 #break {
     position: relative;
@@ -328,11 +368,9 @@ h1 .title {
 
 
 #form_section {
-    width: 91%;
-    margin: 0 auto -10rem auto;
-    border-radius: 0.6rem;
+    margin: 0 auto;
     position: relative;
-    padding: 2rem 0 2rem 0;
+    padding: 3rem 0 4rem 0;
 } form {
     display: flex;
     flex-direction: column;
@@ -344,17 +382,26 @@ h1 .title {
     font-weight: 300;
 } input {
     margin: 0.3rem 0 1rem 0;
-    background: rgba(255,255,255,0.06);
-    border: 2px solid var(--white-01);
-    border-radius: 0.4rem;
+    background: #110163;
+    border: 1px solid #5A5AAD;
+    border-radius: 0.3rem;
     padding: 0.6rem 0.6rem;
     color: var(--white-01);
     font-size: 1rem;
-    transition:background-color 0.6s ease;
+    transition: background-color 0.6s ease, border-color 0.6s ease;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
 } input:focus {
-    background-color: rgba(255,255,255,0.1);
-    outline:none;
-} button {
+    background-color: #000053;
+    border: 1px solid #313184;
+    outline: none;
+} input:nth-child(1):focus {
+
+}  input:nth-child(2):focus {
+
+}  input:nth-child(3):focus {
+
+} #submit {
     padding: 0.6rem 0;
     background: var(--blue-01);
     border: none;
@@ -363,16 +410,17 @@ h1 .title {
     color: var(--light-01);
     font-weight: 500;
     margin-top: 0.6rem;
+} #form_section .subtitle {
+    margin: 0 25vw;
 }
 
 
-footer {
+.strip {
     width: 100%;
-    height: 15rem;
+    height: 2rem;
     background: url(assets/form_bg.jpg);
-    background-position: bottom;
-    background-size: 48rem;
-    background-attachment: fixed;
+    background-position: top;
+    background-size: 100%;
 }
 
 
@@ -441,7 +489,7 @@ footer {
     }
 
     #section02 {
-        background-size: 20rem;
+        background-size: 20rem, 0.8rem;
         background-position: 80% -8rem;
     }
 
@@ -511,11 +559,24 @@ footer {
     }
 
     #form_section {
-        width: 100%;
-        margin: 0 auto -10rem auto;
-        padding: 5rem 0;
-        border-radius: 0;
+        height: 71vh;
+        min-height: 30rem;
+        margin-top: 6rem;
     }
+
+    #bullets_02 .smaller01 {
+        height: 7rem;
+        width: 10rem;
+    }
+    form {
+        padding: 2rem;
+        margin: 3rem auto 0 auto;
+        border-radius: 0.5rem;
+        box-shadow: 0 1rem 5rem -2rem black;
+        border: 1px solid #17176A;
+        background: #000052;
+    }
+
 }
 
 
@@ -556,8 +617,12 @@ footer {
         max-width: unset;
     }
 
+    #bullets_01 img {
+        margin: 1rem auto 2rem auto;
+    }
+
     .margin01 {
-        margin: 4rem auto 5rem auto;
+        margin: 4rem auto 7rem auto;
     }
 
     .divisor {
@@ -588,12 +653,13 @@ footer {
         margin-top: 1.5rem;
     }
 
-    .cta, #header_cta {
+    .cta, #header_cta, #submit {
         transition: background-color 0.2s ease, transform 0.2s ease;
-    } .cta:hover, #header_cta:hover {
+        cursor:pointer;
+    } .cta:hover, #header_cta:hover, #submit:hover {
         background: var(--blue-02);
         transform:scale(1.025);
-    } .cta:active, #header_cta:active {
+    } .cta:active, #header_cta:active, #submit:active {
         background: var(--blue-02);
         transform:scale(0.975);
         transition: background-color 0.2s ease, transform 0.05s ease;
@@ -633,7 +699,20 @@ footer {
         height: 24rem;
         width: 24rem;
     }
+
+    #bullets_03 article {
+        max-width: 35rem;
+    }
     
 } @media (min-width:1280px) {
+
+    .divisor {
+        height: 12rem;
+        border-right: 4px solid rgba(130,160,210,0.1);
+        display: block;
+        width: unset;
+        align-self: center;
+        margin: 0 1vw;
+    }
 
 }
