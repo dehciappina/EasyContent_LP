@@ -270,7 +270,7 @@ h1 .title {
 } #section02 {
     padding: 3rem 0 4rem 0;
     background-image: url(assets/confetti_bg.svg), url(assets/pattern01.svg);
-    background-size: 15rem, 0.6rem;
+    background-size: 15rem, 0.5rem;
     background-repeat: repeat no-repeat, repeat;
     background-position: 80% -10%;
     background-attachment: fixed, scroll;
@@ -286,7 +286,7 @@ h1 .title {
 #form_section {
     background-color: var(--dark-01);
     background-image: url(assets/pattern01.svg);
-    background-size: 0.6rem;
+    background-size: 0.5rem;
     background-position: center;
 }
 
