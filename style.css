@@ -29,6 +29,7 @@
     --blue-01:#0188fe;
     --blue-02: #0157FF;
     --orange-01:#ff6a00;
+    --orange-02: #FF9A30;
     --text-01:#777777;
     --text-02:#444444;
     --light-01:#f3f6ff;
@@ -352,7 +353,7 @@ h1 .title {
     width: 91%;
     max-width: 33rem;
     display: block;
-    margin: 2rem auto 4rem auto;
+    margin: 2rem auto;
 } #anatomy_desktop {
     display: none;
 }
@@ -366,7 +367,16 @@ h1 .title {
     display: block;
 }
 
-
+.see_working {
+    margin: 0 auto 5rem auto;
+    display: block;
+    width: 80%;
+    text-align: center;
+    background: var(--orange-01);
+    color: var(--white-01);
+    padding: 1rem 0.5rem;
+    border-radius: 0.3rem;
+}
 
 #form_section {
     margin: 0 auto;
@@ -676,8 +686,19 @@ h1 .title {
     } #anatomy_desktop {
         display: block;
         width: 65%;
-        margin: 2rem auto 4rem auto;
-    }
+        margin: 2rem auto 2rem auto;
+    } .see_working {
+        max-width: 22rem;
+        transition: background-color 0.2s ease, transform 0.2s ease;
+        cursor:pointer;
+    } .see_working:hover {
+        background: var(--orange-02);
+        transform:scale(1.025);
+    } .see_working:active {
+        background: var(--orange-02);
+        transform:scale(0.975);
+        transition: background-color 0.2s ease, transform 0.05s ease;
+    } 
     
     #break h3 {
         width: 48vw;
