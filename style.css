@@ -96,6 +96,9 @@ header {
     overflow:hidden;
     text-align: center;
     padding: 0 0 2rem 0;
+    background: url(assets/wave01.svg) no-repeat, url(assets/wave02.svg) no-repeat;
+    background-position: right 100%, left 60%;
+    background-size: 90%;
 } #intro_article {
     position: relative;
     width: 91%;
@@ -572,6 +575,7 @@ h1 .title {
     #form_section {
         height: 71vh;
         min-height: 30rem;
+        max-height: 32rem;
         margin-top: 6rem;
     }
 
@@ -660,7 +664,10 @@ h1 .title {
         justify-content: center;
     }
 
-    #section01 .cta {
+    #section01 {
+        background-position: right 44rem, left 30rem;
+        background-size: 40%, 38%;
+    } #section01 .cta {
         margin-top: 1.5rem;
     }
 
