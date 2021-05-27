@@ -396,25 +396,18 @@ h1 .title {
     font-weight: 300;
 } input {
     margin: 0.3rem 0 1rem 0;
-    background: #110163;
-    border: 1px solid #5A5AAD;
+    background: none;
+    border: 2px solid var(--blue-01);
     border-radius: 0.3rem;
     padding: 0.6rem 0.6rem;
     color: var(--white-01);
     font-size: 1rem;
-    transition: background-color 0.6s ease, border-color 0.6s ease;
+    transition: background-color 0.6s ease;
     font-weight: 300;
     font-family: 'Roboto', sans-serif;
 } input:focus {
-    background-color: #000053;
-    border: 1px solid #313184;
+    background-color: #17176A;
     outline: none;
-} input:nth-child(1):focus {
-
-}  input:nth-child(2):focus {
-
-}  input:nth-child(3):focus {
-
 } #submit {
     padding: 0.6rem 0;
     background: var(--blue-01);
@@ -587,9 +580,9 @@ h1 .title {
         padding: 2rem;
         margin: 3rem auto 0 auto;
         border-radius: 0.5rem;
-        box-shadow: 0 1rem 5rem -2rem black;
-        border: 1px solid #17176A;
-        background: #000052;
+        box-shadow: 0 1rem 5rem -2rem var(--blue-01);
+        border: 2px solid var(--blue-01);
+        background: var(--dark-02);
     }
 
 }
@@ -744,4 +737,8 @@ h1 .title {
         margin: 0 1vw;
     }
 
+} @media (min-width:1680px) {
+    html {
+        font-size:17px;
+    }
 }
