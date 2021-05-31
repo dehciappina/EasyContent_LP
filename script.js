@@ -69,13 +69,13 @@ document.onreadystatechange = function () {
                           changeword08.classList.add('hidden_after');
                           changeword09.classList.remove('hidden_before');
                         }, 400);
-                      }, 250);
-                    }, 250);
-                  }, 300);
-                }, 400);
-              }, 450);
-            }, 600);
-          }, 800);
+                      }, 300);
+                    }, 350);
+                  }, 400);
+                }, 500);
+              }, 650);
+            }, 800);
+          }, 900);
       }
 
     }
